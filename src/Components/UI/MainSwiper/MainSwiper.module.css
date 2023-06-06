@@ -1,0 +1,16 @@
+.swiperContainer {
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.swiperContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.slidesContainer {
+    width: fit-content;
+    padding-inline: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

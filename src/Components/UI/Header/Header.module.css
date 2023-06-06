@@ -1,0 +1,32 @@
+.headerContainer {
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.textTitle {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.greetingMessage {
+    color: #ffffff88;
+    font-weight: 100;
+    font-size: 25px;
+    letter-spacing: 0.05em;
+}
+.userName {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 25px;
+    letter-spacing: 0.05em;
+}
+
+.userImage {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
