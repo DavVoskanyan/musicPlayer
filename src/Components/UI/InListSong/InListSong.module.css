@@ -1,0 +1,52 @@
+.inListSong {
+    width: 100%;
+    padding: 15px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+.songImage {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.songInfo {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.songName {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 700;
+}
+.songAuthor {
+    padding-left: 20px;
+    color: #ffffff88;
+    font-size: 15px;
+    font-weight: 100;
+    position: relative;
+}
+.songAuthor::before {
+    content: 'by ';
+    color: #ffffff55;
+    font-size: 15px;
+    font-weight: 100;
+    position: absolute;
+    translate: -20px -1px;
+}
+.songsSeparator {
+    width: 100%;
+    height: 1px;
+    background: #ffffff22;
+    border: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.inListSong:last-of-type > .songsSeparator { display: none; }

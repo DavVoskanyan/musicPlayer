@@ -9,6 +9,13 @@ const MainSwiper = () => {
                 <SwiperSlide/>
                 <SwiperSlide/>
                 <SwiperSlide/>
+                <SwiperSlide/>
+                <SwiperSlide/>
+                <SwiperSlide/>
+                <SwiperSlide/>
+                <SwiperSlide/>
+                <SwiperSlide/>
+                <SwiperSlide/>
             </div>
         </div>
     )
