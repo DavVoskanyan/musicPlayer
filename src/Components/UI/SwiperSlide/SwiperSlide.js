@@ -1,6 +1,6 @@
 import styleClasses from './SwiperSlide.module.css'
 
-import albumImage from '../../../Assets/albumImage.png';
+import albumImage from '../../../Assets/albumImage1.png';
 
 const SwiperSlide = () => {
     const backgroundImageStyles = {

@@ -1,6 +1,6 @@
 import styleClasses from './InListSong.module.css';
 
-import songImage from "../../../Assets/albumImage.png";
+import songImage from "../../../Assets/albumImage1.png";
 const InListSong = () => {
     const backgroundImageStyles = {
         "backgroundImage": `url(${ songImage })`

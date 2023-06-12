@@ -15,7 +15,7 @@
     background-position: center center;
 }
 .songInfo {
-    margin-left: 30px;
+    margin-left: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -24,6 +24,7 @@
     color: #ffffff;
     font-size: 17px;
     font-weight: 700;
+    letter-spacing: 1px;
 }
 .songAuthor {
     padding-left: 20px;

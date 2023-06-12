@@ -1,0 +1,19 @@
+.recentPlayedList {
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+.albumsGrid {
+    width: calc(100% - 20px);
+    aspect-ratio: 6 / 5;
+    margin: 10px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+.albumElementHolder {
+    border-radius: 30px;
+    overflow: hidden;
+}

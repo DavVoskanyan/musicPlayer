@@ -1,0 +1,9 @@
+.albumForList {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background-color: #1d1d21;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
