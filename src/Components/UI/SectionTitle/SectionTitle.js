@@ -4,7 +4,6 @@ const SectionTitle = (props) => {
     return (
         <div className={styleClasses.sectionTitleContainer}>
             <h2 className={styleClasses.sectionTitle}>{props.sectionTitle}</h2>
-            <button className={styleClasses.moreButton}>more</button>
         </div>
     )
 }
