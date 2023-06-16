@@ -10,7 +10,7 @@ const Header = (props) => {
                 <span className={styleClasses.greetingMessage}>Missed you,</span>
                 <span className={styleClasses.userName}>{ props.userName }</span>
             </h1>
-            <img className={styleClasses.userImage} src={userImage} alt=""/>
+            <img className={styleClasses.userImage} src={userImage} alt="" onClick={() => props.changeUserInfoPage(true)}/>
         </header>
     )
 }

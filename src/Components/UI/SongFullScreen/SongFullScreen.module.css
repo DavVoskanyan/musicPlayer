@@ -1,13 +1,24 @@
 .songBackgroundContainer {
-    width: 100vw;
-    height: 100vh;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    opacity: 0.3;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     overflow: hidden;
+    transition-duration: 350ms;
+}
+.songBackgroundContainer.active {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    border-radius: 0;
 }
 .songForegroundContainer {
     width: 100%;

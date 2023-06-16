@@ -1,21 +1,15 @@
 import styleClasses from './SongList.module.css';
 
 import InListSong from '../InListSong/InListSong';
-const SongList = () => {
+const SongList = (props) => {
     return (
         <div className={ styleClasses.songList }>
-            <InListSong />
-            <InListSong />
-            <InListSong />
-            <InListSong />
-            <InListSong />
-            <InListSong />
-            <InListSong />
-            <InListSong />
-            <InListSong />
-            <InListSong />
-            <InListSong />
-            <InListSong />
+            <InListSong changeSongPage={props.changeSongPage}/>
+            <InListSong changeSongPage={props.changeSongPage}/>
+            <InListSong changeSongPage={props.changeSongPage}/>
+            <InListSong changeSongPage={props.changeSongPage}/>
+            <InListSong changeSongPage={props.changeSongPage}/>
+            <InListSong changeSongPage={props.changeSongPage}/>
         </div>
     )
 }

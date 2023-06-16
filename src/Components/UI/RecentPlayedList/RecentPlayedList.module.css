@@ -1,8 +1,9 @@
 .recentPlayedList {
-    width: 100vw;
-    position: fixed;
-    bottom: 0;
+    width: 100%;
+    position: absolute;
+    top: 100vh;
     left: 0;
+    translate: 0 -100%;
 }
 .albumsGrid {
     width: calc(100% - 20px);

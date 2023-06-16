@@ -7,9 +7,11 @@ import forwardStepIcon from '../../../Assets/Icons/forwardStepIcon.svg';
 import PlayerButtonControl from "../PlayerControlButton/PlayerControlButton";
 import InPlayerSongInfo from "../InPlayerSongInfo/InPlayerSongInfo";
 
+
+
 const PlayerPanel = () => {
     return (
-        <div className={styleClasses.playerPanel}>
+        <div className={ styleClasses.playerPanel }>
             <InPlayerSongInfo songName="The Story of Alisher" artistName="Oxxxymiron" featsArray={["Porchy", "Anacondaz"]}/>
             <div className={styleClasses.buttonsPanel}>
                 <PlayerButtonControl icon={backwardStepIcon}/>

@@ -2,14 +2,14 @@ import styleClasses from "./UserCard.module.css"
 
 import userImage from '../../../Assets/userImage.jpeg';
 import arrowIcon from '../../../Assets/Icons/arrowLeft.svg';
-const UserCard = () => {
+const UserCard = (props) => {
     const backgroundStyleObject = {
         'backgroundImage': `url(${userImage})`
     }
 
     return (
         <div className={styleClasses.userCard}>
-            <button className={styleClasses.goBackButton}>
+            <button className={styleClasses.goBackButton} onClick={() => props.changePageState(false)}>
                 <img className={styleClasses.backIcon} src={arrowIcon} alt=""/>
             </button>
             <div style={backgroundStyleObject} className={styleClasses.userImageContainer}></div>

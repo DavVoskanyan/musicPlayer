@@ -1,13 +1,13 @@
 import styleClasses from './InListSong.module.css';
 
 import songImage from "../../../Assets/albumImage1.png";
-const InListSong = () => {
+const InListSong = (props) => {
     const backgroundImageStyles = {
         "backgroundImage": `url(${ songImage })`
     }
 
     return (
-        <div className={ styleClasses.inListSong }>
+        <div className={ styleClasses.inListSong } onClick={ () => { props.changeSongPage(true) } }>
             <div className={ styleClasses.songImage } style={ backgroundImageStyles }/>
             <div className={ styleClasses.songInfo }>
                 <span className={ styleClasses.songName }>Ma</span>
