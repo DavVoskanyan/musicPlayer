@@ -1,0 +1,54 @@
+.songBackgroundContainer {
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    opacity: 0.3;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    transition-duration: 350ms;
+}
+.songBackgroundContainer.active {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    border-radius: 0;
+}
+.songForegroundContainer {
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    background-color: #00000066;
+    position: relative;
+    overflow: hidden;
+}
+.goBackButton {
+    width: 50px;
+    aspect-ratio: 1;
+    border: none;
+    border-radius: 50%;
+    background: #000000;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+.chevronDownIcon {
+    width: 50%;
+}
+.songImage {
+    width: calc(100% - 20px);
+    aspect-ratio: 1;
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    translate: 0 -80%;
+}

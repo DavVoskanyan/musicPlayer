@@ -1,23 +1,47 @@
+import { useRef, useState } from 'react';
+
 import styleClasses from './PlayerPanel.module.css';
 
-import backwardStepIcon from '../../../Assets/Icons/backwardStepIcon.svg';
-import playIcon from '../../../Assets/Icons/playIcon.svg';
-import forwardStepIcon from '../../../Assets/Icons/forwardStepIcon.svg';
-
-import PlayerButtonControl from "../PlayerControlButton/PlayerControlButton";
+import PlayerButton from "../PlayerButton/PlayerButton";
 import InPlayerSongInfo from "../InPlayerSongInfo/InPlayerSongInfo";
 
-
+import song from '../../../Songs/testSong.mp3';
 
 const PlayerPanel = () => {
+    const [ isPlaying, changePlayButtonState ] = useState(false);
+
+    const audioElement = useRef(null);
+
+    const previousSong = () => console.log('prev');
+    const playSong = () => {
+        audioElement.current.play();
+        changePlayButtonState(true);
+    }
+    const pauseSong = () => {
+        audioElement.current.pause();
+        changePlayButtonState(false);
+    }
+    const nextSong = () => console.log('next');
+
     return (
         <div className={ styleClasses.playerPanel }>
             <InPlayerSongInfo songName="The Story of Alisher" artistName="Oxxxymiron" featsArray={["Porchy", "Anacondaz"]}/>
             <div className={styleClasses.buttonsPanel}>
-                <PlayerButtonControl icon={backwardStepIcon}/>
-                <PlayerButtonControl icon={playIcon}/>
-                <PlayerButtonControl icon={forwardStepIcon}/>
+
+                <PlayerButton
+                    buttonType="previous"
+                    buttonClickHandler={ previousSong } />
+
+                <PlayerButton
+                    buttonType={isPlaying ? "pause" : "play"}
+                    buttonClickHandler={ isPlaying ? pauseSong : playSong } />
+
+                <PlayerButton
+                    buttonType="next"
+                    buttonClickHandler={ nextSong } />
+
             </div>
+            <audio src={song} ref={audioElement}></audio>
         </div>
     )
 }

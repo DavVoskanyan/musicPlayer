@@ -1,0 +1,15 @@
+.playerButton {
+    width: 70px;
+    aspect-ratio: 1;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+.playerButton:nth-child(2) {
+    background: #ffffff;
+}
+.inButtonIcon {
+    width: 30%;
+}
