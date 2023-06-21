@@ -6,15 +6,15 @@ import SectionTitle from "../../UI/SectionTitle/SectionTitle";
 import MainSwiper from "../../UI/MainSwiper/MainSwiper";
 import SongList from "../../UI/SongsList/SongList";
 
-const HomePage = ({changeUserInfoPage, changeSongPage}) => {
+const HomePage = (props) => {
     return (
-        <div className={styleClasses.page}>
-            <Header userName="Sicmundus" changeUserInfoPage={changeUserInfoPage}/>
+        <div className={`${ styleClasses.page } ${ props.isAnyPageOpen ? styleClasses.isBackground : '' }`}>
+            <Header userName="Sicmundus" changeUserInfoPage={ props.changeUserInfoPage }/>
             <SearchField />
             <SectionTitle sectionTitle="top albums for you"/>
-            <MainSwiper />
+            <MainSwiper changeSongListPage={ props.changeSongListPage }/>
             <SectionTitle sectionTitle="popular songs"/>
-            <SongList changeSongPage={changeSongPage}/>
+            <SongList changeSongPage={ props.changeSongPage }/>
         </div>
     )
 }

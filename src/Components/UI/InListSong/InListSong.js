@@ -1,7 +1,7 @@
 import styleClasses from './InListSong.module.css';
 
 import songImage from "../../../Assets/albumImage1.png";
-const InListSong = (props) => {
+const InListSong = ( props) => {
     const backgroundImageStyles = {
         "backgroundImage": `url(${ songImage })`
     }
