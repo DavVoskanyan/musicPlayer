@@ -10,9 +10,12 @@ import song from '../../../Songs/testSong.mp3';
 
 const PlayerPanel = (props) => {
     const [ isPlaying, changePlayButtonState ] = useState(false);
+    const [ songDuration, changeDuration ] = useState(0);
 
     const audioElement = useRef(null);
-
+    const setSongDuration = () => {
+        changeDuration(audioElement.current.duration);
+    }
     const timeUpdateHandler = () => {
         const progressPercent = audioElement.current.currentTime / audioElement.current.duration * 100;
         props.changeProgress(progressPercent);
@@ -36,13 +39,14 @@ const PlayerPanel = (props) => {
         <div className={ styleClasses.playerPanel }>
             <audio src={ song }
                    ref={ audioElement }
-                   onTimeUpdate={ timeUpdateHandler }/>
+                   onTimeUpdate={ timeUpdateHandler }
+                   onCanPlay={ setSongDuration }/>
 
             <InPlayerSongInfo songName="The Story of Alisher" artistName="Oxxxymiron" featsArray={["Porchy", "Anacondaz"]}/>
             <div className={styleClasses.buttonsPanel}>
 
                 <PlayerProgressBar progressValue={ props.progressValue }
-                                   songDuration={ audioElement.current.duration }
+                                   songDuration={ songDuration }
                                    changeProgress={ props.changeProgress }
                                    timeUpdateHandler={ timeUpdateHandler }
                                    progressBarClickHandler={ progressBarClickHandler }/>
