@@ -14,7 +14,8 @@ const SongFullScreen = (props) => {
                     <img className={styleClasses.chevronDownIcon} src={chevronDownIcon} alt=""/>
                 </button>
                 <img className={styleClasses.songImage} src={albumImage} alt=""/>
-                <PlayerPanel />
+                <PlayerPanel progressValue={ props.progressValue }
+                             changeProgress={ props.changeProgress }/>
             </div>
         </div>
     )

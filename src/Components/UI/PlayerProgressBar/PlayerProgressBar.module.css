@@ -1,0 +1,24 @@
+.progressBarContainer {
+    width: 100%;
+    height: 20px;
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.currentTime,
+.totalTime {
+    color: #ffffff88;
+}
+.progressBar {
+    width: 70%;
+    height: 5px;
+    background: #ffffff88;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.progressBarActivePart {
+    height: 100%;
+    border-radius: 3px;
+    background: #ffffff;
+}

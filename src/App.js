@@ -11,6 +11,8 @@ function App() {
     const [ isSongListOpen, changeSongListPage ] = useState(false);
     const [ isSongPageOpen, changeSongPage ] = useState(false);
 
+    const [ progressValue, changeProgress ] = useState(0);
+
     const isAnyPageOpen = isUserInfoPageOpen || isSongPageOpen || isSongListOpen;
 
     return (
@@ -22,14 +24,16 @@ function App() {
                       changeSongListPage={ changeSongListPage }/>
 
             <UserInfoPage isOpen={ isUserInfoPageOpen }
-                          changePageState={ changeUserInfoPage } />
+                          changePageState={ changeUserInfoPage }/>
 
             <SongListPage isOpen={ isSongListOpen }
                           changeSongPage={ changeSongPage }
                           changeSongListPage={ changeSongListPage }/>
 
             <SongFullScreen isOpen={ isSongPageOpen }
-                            changeSongPage={ changeSongPage } />
+                            changeSongPage={ changeSongPage }
+                            progressValue={ progressValue }
+                            changeProgress={ changeProgress }/>
 
         </div>
     );
