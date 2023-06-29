@@ -23,19 +23,25 @@ function App() {
                 {
                     songId: 1,
                     songName: 'не сначала',
-                    songPath: '',
+                    artistName: 'oxxxymiron',
+                    songImage: 'albumImage2.png',
+                    songPath: 'Oxxxy1.mp3',
                     songDuration: 0
                 },
                 {
                     songId: 2,
                     songName: 'кем ты стал',
-                    songPath: '',
+                    artistName: 'oxxxymiron',
+                    songImage: 'albumImage2.png',
+                    songPath: 'Oxxxy2.mp3',
                     songDuration: 0
                 },
                 {
                     songId: 3,
                     songName: 'всего лишь писатель',
-                    songPath: '',
+                    artistName: 'oxxxymiron',
+                    songImage: 'albumImage2.png',
+                    songPath: 'Oxxxy1.mp3',
                     songDuration: 0
                 },
 
@@ -45,54 +51,70 @@ function App() {
             albumId: 2,
             albumName: 'рубикон',
             artist: 'drummatix',
-            albumImageFileName: 'albumImage1.png',
+            albumImageFileName: 'albumImage5.png',
             songs: [
                 {
                     songId: 4,
                     songName: 'тёмным по белому',
-                    songPath: '',
+                    artistName: 'drummatix',
+                    songImage: 'albumImage5.png',
+                    songPath: 'drummatix1.mp3',
                     songDuration: 0
                 },
                 {
                     songId: 5,
                     songName: 'тепло',
-                    songPath: '',
+                    artistName: 'drummatix',
+                    songImage: 'albumImage5.png',
+                    songPath: 'drummatix1.mp3',
                     songDuration: 0
                 },
                 {
                     songId: 6,
                     songName: 'успокой',
-                    songPath: '',
+                    artistName: 'drummatix',
+                    songImage: 'albumImage5.png',
+                    songPath: 'drummatix1.mp3',
                     songDuration: 0
                 },
                 {
                     songId: 7,
                     songName: 'земля',
-                    songPath: '',
+                    artistName: 'drummatix',
+                    songImage: 'albumImage5.png',
+                    songPath: 'drummatix1.mp3',
                     songDuration: 0
                 },
                 {
                     songId: 8,
                     songName: 'к пропасти',
-                    songPath: '',
+                    artistName: 'drummatix',
+                    songImage: 'albumImage5.png',
+                    songPath: 'drummatix1.mp3',
                     songDuration: 0
                 },
                 {
                     songId: 9,
                     songName: 'рубикон',
-                    songPath: '',
+                    artistName: 'drummatix',
+                    songImage: 'albumImage5.png',
+                    songPath: 'drummatix1.mp3',
                     songDuration: 0
                 },
                 {
                     songId: 10,
                     songName: 'монолит',
-                    songPath: '',
+                    artistName: 'drummatix',
+                    songImage: 'albumImage5.png',
+                    songPath: 'drummatix1.mp3',
                     songDuration: 0
                 },
                 {
                     songId: 11,
                     songName: 'афробит',
-                    songPath: '',
+                    artistName: 'drummatix',
+                    songImage: 'albumImage5.png',
+                    songPath: 'drummatix1.mp3',
                     songDuration: 0
                 },
 
@@ -146,11 +168,13 @@ function App() {
 
     const [ userInfoPageState, changeUserInfoPageState ] = useState( {
         isOpen: false,
+        userInfo: userInfo,
         shownAlbums: shownAlbums,
         topSongs: topSongs,
     } );
     const [ songListPageState, changeSongListPageState ] = useState( {
         isOpen: false,
+        currentAlbumInfo: null,
         currentSongs: topSongs
     } );
     const [ songPageState, changeSongPageState ] = useState( {
@@ -163,7 +187,7 @@ function App() {
     const isAnyPageOpen = userInfoPageState.isOpen || songPageState.isOpen || songListPageState.isOpen;
 
     return (
-        <div className="App">
+        <div className="App" >
 
             <HomePage isAnyPageOpen={ isAnyPageOpen }
 
@@ -177,15 +201,13 @@ function App() {
                       changeSongPageState={ changeSongPageState }
 
                       userInfo={ userInfo }
-                      shownAlbums={ userInfoPageState.shownAlbums }
+                      shownAlbums={ shownAlbums }
                       topSongs={ userInfoPageState.topSongs } />
 
             <UserInfoPage isOpen={ userInfoPageState.isOpen }
 
                           userInfoPageState={ userInfoPageState }
-                          changeUserInfoPageState={ changeUserInfoPageState }
-
-                          userInfo={ userInfo } />
+                          changeUserInfoPageState={ changeUserInfoPageState } />
 
             <SongListPage isOpen={ songListPageState.isOpen }
 
@@ -200,7 +222,7 @@ function App() {
             <SongFullScreen isOpen={ songPageState.isOpen }
 
                             songPageState={ songPageState }
-                            changeSongPageState={ changeSongPageState }/>
+                            changeSongPageState={ changeSongPageState } />
 
         </div>
     );

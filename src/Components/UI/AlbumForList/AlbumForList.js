@@ -5,7 +5,7 @@ import albumImage2 from '../../../Assets/albumImage2.png';
 import albumImage3 from '../../../Assets/albumImage3.png';
 import albumImage4 from '../../../Assets/albumImage4.png';
 
-const AlbumForList = (props) => {
+const AlbumForList = ( props ) => {
     let image;
     if(props.number === 1) {
         image = albumImage1;
