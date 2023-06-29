@@ -28,6 +28,7 @@
     color: #ffffff;
     font-size: 17px;
     font-weight: 700;
+    text-transform: capitalize;
 }
 .artistName {
     padding-left: 20px;
@@ -35,6 +36,7 @@
     font-size: 15px;
     font-weight: 100;
     position: relative;
+    text-transform: capitalize;
 }
 .artistName::before {
     content: 'by ';
@@ -43,4 +45,5 @@
     font-weight: 100;
     position: absolute;
     translate: -20px -1px;
+    text-transform: none;
 }

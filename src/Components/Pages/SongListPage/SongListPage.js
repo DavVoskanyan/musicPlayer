@@ -1,6 +1,6 @@
 import styleClasses from './SongListPage.module.css';
 
-import SongsList from '../../UI/SongsList/SongList';
+import SongList from '../../UI/SongList/SongList';
 
 import albumImage from '../../../Assets/albumImage2.png';
 
@@ -8,7 +8,8 @@ const SongListPage = (props) => {
 
     return (
         <div className={ `${ styleClasses.songListPage } ${ props.isOpen ? styleClasses.active : '' }` }>
-            <div className={ styleClasses.emptySpace } onClick={ () => { props.changeSongListPage(false) } }></div>
+            <div className={ styleClasses.emptySpace }
+                 onClick={ () => { props.changeSongListPageState( { ...props.songListPageState, isOpen: false } ) } } />
             <div className={ `${ styleClasses.listContainer } ${ props.isOpen ? styleClasses.active : '' }` }>
                 <div className={ styleClasses.albumInfoContainer }>
                     <img src={ albumImage } alt="" className={ styleClasses.albumImage }/>
@@ -21,7 +22,7 @@ const SongListPage = (props) => {
                         </span>
                     </div>
                 </div>
-                <SongsList changeSongPage={ props.changeSongPage }/>
+                <SongList withImage={ false } currentSongs={ props.currentSongs } songPageState={ props.songPageState } changeSongPageState={ props.changeSongPageState }/>
             </div>
         </div>
     )

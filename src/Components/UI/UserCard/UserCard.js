@@ -1,21 +1,21 @@
 import styleClasses from "./UserCard.module.css"
 
-import userImage from '../../../Assets/userImage.jpeg';
 import arrowIcon from '../../../Assets/Icons/arrowLeft.svg';
 const UserCard = (props) => {
-    const backgroundStyleObject = {
-        'backgroundImage': `url(${userImage})`
-    }
 
     return (
         <div className={styleClasses.userCard}>
-            <button className={styleClasses.goBackButton} onClick={() => props.changePageState(false)}>
+            <button className={styleClasses.goBackButton} onClick={() => props.changeUserInfoPageState( { ...props.userInfoPageState, isOpen: false } ) }>
                 <img className={styleClasses.backIcon} src={arrowIcon} alt=""/>
             </button>
-            <div style={backgroundStyleObject} className={styleClasses.userImageContainer}></div>
+
+            <img className={styleClasses.userImageContainer}
+                 src={ `/UserImages/${props.userInfo.userImageFileName}` }
+                 alt="" />
+
             <div className={styleClasses.userNameContainer}>
-                <span className={styleClasses.userName}>David Voskanyan</span>
-                <span className={styleClasses.userNick}>sicmundus</span>
+                <span className={styleClasses.userName}>{ props.userInfo.realName }</span>
+                <span className={styleClasses.userNick}>{ props.userInfo.nickName }</span>
             </div>
         </div>
     );

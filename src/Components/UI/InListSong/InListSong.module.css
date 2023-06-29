@@ -23,8 +23,9 @@
 .songName {
     color: #ffffff;
     font-size: 17px;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: 1px;
+    text-transform: capitalize;
 }
 .songAuthor {
     padding-left: 20px;
@@ -32,6 +33,7 @@
     font-size: 15px;
     font-weight: 100;
     position: relative;
+    text-transform: capitalize;
 }
 .songAuthor::before {
     content: 'by ';
@@ -40,6 +42,7 @@
     font-weight: 100;
     position: absolute;
     translate: -20px -1px;
+    text-transform: none;
 }
 .songsSeparator {
     width: 100%;

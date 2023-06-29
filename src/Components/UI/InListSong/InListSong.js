@@ -1,17 +1,33 @@
 import styleClasses from './InListSong.module.css';
 
-import songImage from "../../../Assets/albumImage1.png";
-const InListSong = ( props) => {
-    const backgroundImageStyles = {
-        "backgroundImage": `url(${ songImage })`
+const InListSong = ( props ) => {
+
+    const onSongClickHandler = () => {
+        if(props.songInfo.songId === props.songPageState.currentPlayingSong?.songId) {
+            props.changeSongPageState( {
+                ...props.songPageState,
+                isOpen: true,
+            } )
+        }
+        else {
+            props.changeSongPageState( {
+                isOpen: true,
+                currentPlayingSong: props.songInfo,
+                progressBarPercent: 0
+            } )
+        }
     }
 
     return (
-        <div className={ styleClasses.inListSong } onClick={ () => { props.changeSongPage(true) } }>
-            <div className={ styleClasses.songImage } style={ backgroundImageStyles }/>
+        <div className={ styleClasses.inListSong } onClick={ onSongClickHandler }>
+            {
+                props.withImage
+                    ? <img src={ `/AlbumImages/${ props.songInfo.songImage }` } alt='songImage' className={ styleClasses.songImage }/>
+                    : ''
+            }
             <div className={ styleClasses.songInfo }>
-                <span className={ styleClasses.songName }>Ma</span>
-                <span className={ styleClasses.songAuthor }>Drummatix</span>
+                <span className={ styleClasses.songName }>{ props.songInfo.songName }</span>
+                <span className={ styleClasses.songAuthor }>{ props.songInfo.artistName }</span>
             </div>
             <hr className={ styleClasses.songsSeparator }/>
         </div>

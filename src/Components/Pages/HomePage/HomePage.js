@@ -4,17 +4,17 @@ import Header from '../../UI/Header/Header';
 import SearchField from "../../UI/SearchField/SearchField";
 import SectionTitle from "../../UI/SectionTitle/SectionTitle";
 import MainSwiper from "../../UI/MainSwiper/MainSwiper";
-import SongList from "../../UI/SongsList/SongList";
+import SongList from "../../UI/SongList/SongList";
 
 const HomePage = (props) => {
     return (
         <div className={`${ styleClasses.page } ${ props.isAnyPageOpen ? styleClasses.isBackground : '' }`}>
-            <Header userName="Sicmundus" changeUserInfoPage={ props.changeUserInfoPage }/>
+            <Header userInfo={ props.userInfo } userInfoPageState={ props.userInfoPageState } changeUserInfoPageState={ props.changeUserInfoPageState }/>
             <SearchField />
             <SectionTitle sectionTitle="top albums for you"/>
-            <MainSwiper changeSongListPage={ props.changeSongListPage }/>
+            <MainSwiper songListPageState={ props.songListPageState } changeSongListPageState={ props.changeSongListPageState } shownAlbums={ props.shownAlbums }/>
             <SectionTitle sectionTitle="popular songs"/>
-            <SongList changeSongPage={ props.changeSongPage }/>
+            <SongList withImage={ true } currentSongs={ props.topSongs } songPageState={ props.songPageState } changeSongPageState={ props.changeSongPageState }/>
         </div>
     )
 }

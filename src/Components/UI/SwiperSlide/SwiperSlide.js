@@ -1,18 +1,19 @@
 import styleClasses from './SwiperSlide.module.css'
 
-import albumImage from '../../../Assets/albumImage1.png';
 
 const SwiperSlide = (props) => {
     const backgroundImageStyles = {
-        "backgroundImage": `url(${ albumImage })`
+        "backgroundImage": `url(/AlbumImages/${ props.albumInfo.albumImageFileName })`
     }
 
+    const onAlbumClickHandler = () => props.changeSongListPageState( { ...props.songListPageState, isOpen: true } );
+
     return (
-        <div className={ styleClasses.swiperSlide } onClick={() => props.changeSongListPage(true)}>
-            <div className={styleClasses.albumImage} style={ backgroundImageStyles }/>
+        <div className={ styleClasses.swiperSlide } onClick={ onAlbumClickHandler } >
+            <div className={styleClasses.albumImage} style={ backgroundImageStyles } />
             <div className={ styleClasses.textInfo }>
-                <span className={styleClasses.albumName}>Рубикон</span>
-                <span className={styleClasses.artistName}>Drummatix</span>
+                <span className={styleClasses.albumName}>{ props.albumInfo.albumName }</span>
+                <span className={styleClasses.artistName}>{ props.albumInfo.artist }</span>
             </div>
         </div>
     )
