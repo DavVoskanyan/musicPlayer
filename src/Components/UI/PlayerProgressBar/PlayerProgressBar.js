@@ -2,7 +2,7 @@ import styleClasses from './PlayerProgressBar.module.css';
 
 const PlayerProgressBar = (props) => {
 
-    const progressTime = props.songDuration * props.progressValue / 100;
+    const progressTime = props.songDuration * props.songPageState.progressBarPercent / 100;
 
     const durationMinutes = Math.floor(props.songDuration / 60);
     const durationSeconds = Math.floor(props.songDuration % 60) < 10
@@ -15,7 +15,7 @@ const PlayerProgressBar = (props) => {
     const currentTimeSeconds = Math.floor(progressTime % 60) < 10
         ? `0${Math.floor(progressTime % 60)}`
         : Math.floor(progressTime % 60);
-    const currentTime = `${ currentTimeMinutes }:${ currentTimeSeconds }`;
+    const currentTime = `${ currentTimeMinutes ? currentTimeMinutes : 0 }:${ currentTimeSeconds ? currentTimeSeconds : '00' }`;
 
     const progressBarTouchHandler = (eventObject) => {
         const positionX = eventObject.clientX;
@@ -33,7 +33,7 @@ const PlayerProgressBar = (props) => {
         <div className={ styleClasses.progressBarContainer } onClick={ progressBarTouchHandler }>
             <span className={ styleClasses.currentTime }>{ currentTime }</span>
             <div className={ styleClasses.progressBar }>
-                <div className={ styleClasses.progressBarActivePart } style={ { 'width': `${props.progressValue}%` } } />
+                <div className={ styleClasses.progressBarActivePart } style={ { 'width': `${ props.songPageState.progressBarPercent }%` } } />
             </div>
             <span className={ styleClasses.totalTime }>{ durationParser }</span>
         </div>

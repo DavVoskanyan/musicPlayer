@@ -6,9 +6,14 @@ const MainSwiper = (props) => {
     return (
         <div className={styleClasses.swiperContainer}>
             <div className={styleClasses.slidesContainer}>
-                <SwiperSlide changeSongListPage={props.changeSongListPage}/>
-                <SwiperSlide changeSongListPage={props.changeSongListPage}/>
-                <SwiperSlide changeSongListPage={props.changeSongListPage}/>
+                {
+                    props.shownAlbums?.map( albumObject => {
+                        return <SwiperSlide key={ albumObject.albumId }
+                                            albumInfo={ albumObject }
+                                            songListPageState={ props.songListPageState }
+                                            changeSongListPageState={ props.changeSongListPageState }/>
+                    })
+                }
             </div>
         </div>
     )

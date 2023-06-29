@@ -6,7 +6,6 @@ import PlayerProgressBar from '../PlayerProgressBar/PlayerProgressBar';
 import PlayerButton from "../PlayerButton/PlayerButton";
 import InPlayerSongInfo from "../InPlayerSongInfo/InPlayerSongInfo";
 
-import song from '../../../Songs/testSong.mp3';
 
 const PlayerPanel = (props) => {
     const [ isPlaying, changePlayButtonState ] = useState(false);
@@ -18,7 +17,7 @@ const PlayerPanel = (props) => {
     }
     const timeUpdateHandler = () => {
         const progressPercent = audioElement.current.currentTime / audioElement.current.duration * 100;
-        props.changeProgress(progressPercent);
+        props.changeSongPageState( { ...props.songPageState, progressBarPercent: progressPercent  } );
     }
     const progressBarClickHandler = (percent) => {
         audioElement.current.currentTime = audioElement.current.duration * percent / 100;
@@ -27,27 +26,33 @@ const PlayerPanel = (props) => {
     const previousSong = () => console.log('prev');
     const playSong = () => {
         audioElement.current.play();
-        changePlayButtonState(true);
+        props.changeSongPageState( { ...props.songPageState, isPlaying: true } );
     }
     const pauseSong = () => {
         audioElement.current.pause();
-        changePlayButtonState(false);
+        props.changeSongPageState( { ...props.songPageState, isPlaying: false } );
     }
     const nextSong = () => console.log('next');
 
     return (
         <div className={ styleClasses.playerPanel }>
-            <audio src={ song }
+            <audio src={ `/Audio/${ props.songPageState.currentPlayingSong.songPath }` }
                    ref={ audioElement }
                    onTimeUpdate={ timeUpdateHandler }
                    onCanPlay={ setSongDuration }/>
 
-            <InPlayerSongInfo songName="The Story of Alisher" artistName="Oxxxymiron" featsArray={["Porchy", "Anacondaz"]}/>
+            <InPlayerSongInfo songName={ props.songPageState.currentPlayingSong.songName }
+                              artistName={ props.songPageState.currentPlayingSong.artistName }
+                              featsArray={ [ ] }/>
             <div className={styleClasses.buttonsPanel}>
 
                 <PlayerProgressBar progressValue={ props.progressValue }
-                                   songDuration={ songDuration }
                                    changeProgress={ props.changeProgress }
+
+                                   songPageState={ props.songPageState }
+                                   changeSongPageState={ props.changeSongPageState }
+
+                                   songDuration={ songDuration }
                                    timeUpdateHandler={ timeUpdateHandler }
                                    progressBarClickHandler={ progressBarClickHandler }/>
 
@@ -56,8 +61,8 @@ const PlayerPanel = (props) => {
                     buttonClickHandler={ previousSong } />
 
                 <PlayerButton
-                    buttonType={isPlaying ? "pause" : "play"}
-                    buttonClickHandler={ isPlaying ? pauseSong : playSong } />
+                    buttonType={ props.songPageState.isPlaying ? "pause" : "play" }
+                    buttonClickHandler={ props.songPageState.isPlaying ? pauseSong : playSong } />
 
                 <PlayerButton
                     buttonType="next"
