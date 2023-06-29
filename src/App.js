@@ -23,17 +23,20 @@ function App() {
                 {
                     songId: 1,
                     songName: 'не сначала',
-                    songPath: ''
+                    songPath: '',
+                    songDuration: 0
                 },
                 {
                     songId: 2,
                     songName: 'кем ты стал',
-                    songPath: ''
+                    songPath: '',
+                    songDuration: 0
                 },
                 {
                     songId: 3,
                     songName: 'всего лишь писатель',
-                    songPath: ''
+                    songPath: '',
+                    songDuration: 0
                 },
 
             ]
@@ -47,42 +50,50 @@ function App() {
                 {
                     songId: 4,
                     songName: 'тёмным по белому',
-                    songPath: ''
+                    songPath: '',
+                    songDuration: 0
                 },
                 {
                     songId: 5,
                     songName: 'тепло',
-                    songPath: ''
+                    songPath: '',
+                    songDuration: 0
                 },
                 {
                     songId: 6,
                     songName: 'успокой',
-                    songPath: ''
+                    songPath: '',
+                    songDuration: 0
                 },
                 {
                     songId: 7,
                     songName: 'земля',
-                    songPath: ''
+                    songPath: '',
+                    songDuration: 0
                 },
                 {
                     songId: 8,
                     songName: 'к пропасти',
-                    songPath: ''
+                    songPath: '',
+                    songDuration: 0
                 },
                 {
                     songId: 9,
                     songName: 'рубикон',
-                    songPath: ''
+                    songPath: '',
+                    songDuration: 0
                 },
                 {
                     songId: 10,
                     songName: 'монолит',
-                    songPath: ''
+                    songPath: '',
+                    songDuration: 0
                 },
                 {
                     songId: 11,
                     songName: 'афробит',
-                    songPath: ''
+                    songPath: '',
+                    songDuration: 0
                 },
 
             ]
@@ -95,35 +106,40 @@ function App() {
             songName: 'где нас нет',
             artistName: 'oxxxymiron',
             songPath: 'Oxxxy1.mp3',
-            songImage: 'albumImage2.png'
+            songImage: 'albumImage2.png',
+            songDuration: 0
         },
         {
             songId: 2,
             songName: 'башня из слоновой кости',
             artistName: 'oxxxymiron',
             songPath: 'Oxxxy2.mp3',
-            songImage: 'albumImage2.png'
+            songImage: 'albumImage2.png',
+            songDuration: 0
         },
         {
             songId: 3,
             songName: 'кем ты стал',
             artistName: 'oxxxymiron',
             songPath: 'Oxxxy1.mp3',
-            songImage: 'albumImage2.png'
+            songImage: 'albumImage2.png',
+            songDuration: 0
         },
         {
             songId: 4,
             songName: 'полигон',
             artistName: 'oxxxymiron',
             songPath: 'Oxxxy2.mp3',
-            songImage: 'albumImage2.png'
+            songImage: 'albumImage2.png',
+            songDuration: 0
         },
         {
             songId: 5,
             songName: 'слово мэра',
             artistName: 'oxxxymiron',
             songPath: 'Oxxxy1.mp3',
-            songImage: 'albumImage2.png'
+            songImage: 'albumImage2.png',
+            songDuration: 0
         }
     ]
 
@@ -139,13 +155,7 @@ function App() {
     } );
     const [ songPageState, changeSongPageState ] = useState( {
         isOpen: false,
-        currentPlayingSong: {
-            songId: 1,
-            songName: 'где нас нет',
-            artistName: 'oxxxymiron',
-            songPath: 'Oxxxy1.mp3',
-            songImage: 'albumImage2.png'
-        },
+        currentPlayingSong: null,
         progressBarPercent: 0,
         isPlaying: false
     } );

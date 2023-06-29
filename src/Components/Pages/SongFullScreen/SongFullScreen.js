@@ -5,7 +5,7 @@ import chevronDownIcon from '../../../Assets/Icons/chevronDownIcon.svg';
 import PlayerPanel from "../../UI/PlayerPanel/PlayerPanel";
 const SongFullScreen = (props) => {
 
-    const songImageSrc = `/AlbumImages/${ props.songPageState.currentPlayingSong.songImage }`;
+    const songImageSrc = `/AlbumImages/${ props.songPageState.currentPlayingSong?.songImage }`;
     const backgroundImageStyle = {
         backgroundImage: `url( ${ songImageSrc } )`
     }

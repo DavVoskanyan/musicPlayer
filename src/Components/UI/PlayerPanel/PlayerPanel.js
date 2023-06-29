@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 
 import styleClasses from './PlayerPanel.module.css';
 
@@ -8,12 +8,16 @@ import InPlayerSongInfo from "../InPlayerSongInfo/InPlayerSongInfo";
 
 
 const PlayerPanel = (props) => {
-    const [ isPlaying, changePlayButtonState ] = useState(false);
-    const [ songDuration, changeDuration ] = useState(0);
 
     const audioElement = useRef(null);
     const setSongDuration = () => {
-        changeDuration(audioElement.current.duration);
+        props.changeSongPageState( {
+            ...props.songPageState,
+            currentPlayingSong: {
+                ...props.songPageState.currentPlayingSong,
+                songDuration: audioElement.current.duration
+            }
+        } );
     }
     const timeUpdateHandler = () => {
         const progressPercent = audioElement.current.currentTime / audioElement.current.duration * 100;
@@ -36,13 +40,13 @@ const PlayerPanel = (props) => {
 
     return (
         <div className={ styleClasses.playerPanel }>
-            <audio src={ `/Audio/${ props.songPageState.currentPlayingSong.songPath }` }
+            <audio src={ `/Audio/${ props.songPageState.currentPlayingSong?.songPath }` }
                    ref={ audioElement }
                    onTimeUpdate={ timeUpdateHandler }
                    onCanPlay={ setSongDuration }/>
 
-            <InPlayerSongInfo songName={ props.songPageState.currentPlayingSong.songName }
-                              artistName={ props.songPageState.currentPlayingSong.artistName }
+            <InPlayerSongInfo songName={ props.songPageState.currentPlayingSong?.songName }
+                              artistName={ props.songPageState.currentPlayingSong?.artistName }
                               featsArray={ [ ] }/>
             <div className={styleClasses.buttonsPanel}>
 
@@ -52,7 +56,7 @@ const PlayerPanel = (props) => {
                                    songPageState={ props.songPageState }
                                    changeSongPageState={ props.changeSongPageState }
 
-                                   songDuration={ songDuration }
+                                   songDuration={ props.songPageState.currentPlayingSong?.songDuration }
                                    timeUpdateHandler={ timeUpdateHandler }
                                    progressBarClickHandler={ progressBarClickHandler }/>
 

@@ -3,11 +3,19 @@ import styleClasses from './InListSong.module.css';
 const InListSong = ( props ) => {
 
     const onSongClickHandler = () => {
-        props.changeSongPageState( {
-            isOpen: true,
-            currentPlayingSong: props.songInfo,
-            progressBarPercent: 0
-        } )
+        if(props.songInfo.songId === props.songPageState.currentPlayingSong?.songId) {
+            props.changeSongPageState( {
+                ...props.songPageState,
+                isOpen: true,
+            } )
+        }
+        else {
+            props.changeSongPageState( {
+                isOpen: true,
+                currentPlayingSong: props.songInfo,
+                progressBarPercent: 0
+            } )
+        }
     }
 
     return (
