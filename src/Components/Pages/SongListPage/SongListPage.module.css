@@ -58,7 +58,9 @@
 .albumName {
     color: #ffffff;
     font-size: 20px;
+    text-transform: capitalize;
 }
 .artistName {
     color: #ffffff88;
+    text-transform: capitalize;
 }
