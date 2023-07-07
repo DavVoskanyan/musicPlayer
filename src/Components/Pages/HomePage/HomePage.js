@@ -14,11 +14,11 @@ const HomePage = ( props ) => {
                     userInfoPageState={ props.userInfoPageState }
                     changeUserInfoPageState={ props.changeUserInfoPageState } />
 
-            <SearchField />
+            <SearchField searchInputHandler={ props.searchInputHandler }/>
 
             <SectionTitle sectionTitle="top albums" />
 
-            <MainSwiper shownAlbums={ props.shownAlbums }
+            <MainSwiper shownAlbums={ props.homePageState.currentAlbums }
 
                         songListPageState={ props.songListPageState }
                         changeSongListPageState={ props.changeSongListPageState } />
@@ -26,7 +26,7 @@ const HomePage = ( props ) => {
             <SectionTitle sectionTitle="popular songs" />
 
             <SongList withImage={ true }
-                      currentSongs={ props.topSongs }
+                      currentSongs={ props.homePageState.currentSongs }
 
                       songPageState={ props.songPageState }
                       changeSongPageState={ props.changeSongPageState } />

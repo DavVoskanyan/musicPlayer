@@ -4,6 +4,7 @@ import styleClasses from './PlayerPanel.module.css';
 
 import PlayerProgressBar from '../PlayerProgressBar/PlayerProgressBar';
 import PlayerButton from "../PlayerButton/PlayerButton";
+import PlayButton from "../PlayButton/PlayButton";
 import InPlayerSongInfo from "../InPlayerSongInfo/InPlayerSongInfo";
 
 
@@ -71,8 +72,9 @@ const PlayerPanel = ( props ) => {
                 <PlayerButton buttonType="previous"
                               buttonClickHandler={ previousSong } />
 
-                <PlayerButton buttonType={ props.songPageState.isPlaying ? "pause" : "play" }
-                              buttonClickHandler={ props.songPageState.isPlaying ? pauseSong : playSong } />
+                <PlayButton isPlaying={ props.songPageState.isPlaying }
+                            pauseSong={ pauseSong }
+                            playSong={ playSong } />
 
                 <PlayerButton buttonType="next"
                               buttonClickHandler={ nextSong } />

@@ -1,7 +1,7 @@
 .songInfoContainer {
     width: 100%;
-    height: 50%;
-    padding: 15px;
+    height: 40%;
+    padding: 0 15px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

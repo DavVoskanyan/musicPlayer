@@ -1,0 +1,146 @@
+{
+  "albumsInfo": [
+    {
+      "albumId": 1,
+      "albumName": "shaken by a low sound",
+      "albumImageFileName": "albumImage6.png",
+      "artist": "crooked still",
+      "songs": [
+        {
+          "songId": 1,
+          "songName": "can't you hear me callin'",
+          "songPath": "Crooked1.mp3"
+        },
+        {
+          "songId": 2,
+          "songName": "little sadie",
+          "songPath": "Crooked2.mp3"
+        },
+        {
+          "songId": 3,
+          "songName": "new railroad",
+          "songPath": "Crooked3.mp3"
+        },
+        {
+          "songId": 4,
+          "songName": "oxford town / cumberland gap",
+          "songPath": "Crooked4.mp3"
+        },
+        {
+          "songId": 5,
+          "songName": "lone pilgrim",
+          "songPath": "Crooked5.mp3"
+        },
+        {
+          "songId": 6,
+          "songName": "come on in my kitchen",
+          "songPath": "Crooked6.mp3"
+        },
+        {
+          "songId": 7,
+          "songName": "ain't no grave",
+          "songPath": "Crooked7.mp3"
+        },
+        {
+          "songId": 8,
+          "songName": "ecstasy",
+          "songPath": "Crooked8.mp3"
+        },
+        {
+          "songId": 9,
+          "songName": "mountain jumper",
+          "songPath": "Crooked9.mp3"
+        },
+        {
+          "songId": 10,
+          "songName": "railroad bill",
+          "songPath": "Crooked10.mp3"
+        },
+        {
+          "songId": 11,
+          "songName": "wind and rain",
+          "songPath": "Crooked11.mp3"
+        }
+      ]
+    }
+  ],
+  "songsInfo": [
+    {
+      "songId": 1,
+      "songName": "can't you hear me callin'",
+      "artistName": "crooked still",
+      "songImage": "albumImage6.png",
+      "songPath": "Crooked1.mp3"
+    },
+    {
+      "songId": 2,
+      "songName": "little sadie",
+      "artistName": "crooked still",
+      "songImage": "albumImage6.png",
+      "songPath": "Crooked2.mp3"
+    },
+    {
+      "songId": 3,
+      "songName": "new railroad",
+      "artistName": "crooked still",
+      "songImage": "albumImage6.png",
+      "songPath": "Crooked3.mp3"
+    },
+    {
+      "songId": 4,
+      "songName": "oxford town / cumberland gap",
+      "artistName": "crooked still",
+      "songImage": "albumImage6.png",
+      "songPath": "Crooked4.mp3"
+    },
+    {
+      "songId": 5,
+      "songName": "lone pilgrim",
+      "artistName": "crooked still",
+      "songImage": "albumImage6.png",
+      "songPath": "Crooked5.mp3"
+    },
+    {
+      "songId": 6,
+      "songName": "come on in my kitchen",
+      "artistName": "crooked still",
+      "songImage": "albumImage6.png",
+      "songPath": "Crooked6.mp3"
+    },
+    {
+      "songId": 7,
+      "songName": "ain't no grave",
+      "artistName": "crooked still",
+      "songImage": "albumImage6.png",
+      "songPath": "Crooked7.mp3"
+    },
+    {
+      "songId": 8,
+      "songName": "ecstasy",
+      "artistName": "crooked still",
+      "songImage": "albumImage6.png",
+      "songPath": "Crooked8.mp3"
+    },
+    {
+      "songId": 9,
+      "songName": "mountain jumper",
+      "artistName": "crooked still",
+      "songImage": "albumImage6.png",
+      "songPath": "Crooked9.mp3"
+    },
+    {
+      "songId": 10,
+      "songName": "railroad bill",
+      "artistName": "crooked still",
+      "songImage": "albumImage6.png",
+      "songPath": "Crooked10.mp3"
+    },
+    {
+      "songId": 11,
+      "songName": "wind and rain",
+      "artistName": "crooked still",
+      "songImage": "albumImage6.png",
+      "songPath": "Crooked11.mp3"
+    }
+  ]
+}

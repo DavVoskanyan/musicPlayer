@@ -1,7 +1,7 @@
 .playerPanel {
     width: calc(100% - 20px);
     height: 25vh;
-    background: #33333344;
+    background: #11111166;
     border-radius: 30px;
     position: fixed;
     bottom: 10px;
@@ -17,6 +17,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    align-content: flex-start;
     justify-content: center;
     gap: 5%;
     position: absolute;

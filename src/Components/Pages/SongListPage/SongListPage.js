@@ -34,7 +34,7 @@ const SongListPage = ( props ) => {
                 </div>
 
                 <SongList withImage={ false }
-                          currentSongs={ props.songListPageState.currentAlbumInfo?.songs }
+                          albumInfo={ props.songListPageState.currentAlbumInfo }
 
                           songPageState={ props.songPageState }
                           changeSongPageState={ props.changeSongPageState }/>
