@@ -2,9 +2,6 @@ import styleClasses from './SwiperSlide.module.css'
 
 
 const SwiperSlide = ( props ) => {
-    const backgroundImageStyles = {
-        "backgroundImage": `url(/AlbumImages/${ props.albumInfo.albumImageFileName })`
-    }
 
     const onAlbumClickHandler = () => {
 
@@ -22,8 +19,9 @@ const SwiperSlide = ( props ) => {
         <div className={ styleClasses.swiperSlide }
              onClick={ onAlbumClickHandler } >
 
-            <div className={styleClasses.albumImage}
-                 style={ backgroundImageStyles } />
+            <img className={styleClasses.albumImage}
+                 src={ `/AlbumImages/${ props.albumInfo.albumImageFileName }` }
+                 alt='albumImage' />
 
             <div className={ styleClasses.textInfo } >
 

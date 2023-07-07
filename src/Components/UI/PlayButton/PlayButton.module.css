@@ -1,0 +1,57 @@
+.playButton {
+    height: 55%;
+    aspect-ratio: 1;
+    background: #ffffff;
+    border: none;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.playLine1, .playLine2, .playLine3, .pauseLine1, .pauseLine2 {
+    width: 40%;
+    height: 5px;
+    border-radius: 3px;
+    background: #1d1d21;
+    position: absolute;
+    transition: 350ms ease-in-out;
+}
+.playLine1 {
+    left: calc(30% - 8px);
+    top: calc(50% - 2px);
+    rotate: 90deg;
+    translate: 0 100px;
+}
+.playLine2 {
+    left: calc(30% + 3px);
+    top: calc(50% - 8px);
+    rotate: 30deg;
+    translate: -100px -50px;
+}
+.playLine3 {
+    left: calc(30% + 3px);
+    top: calc(50% + 4px);
+    rotate: -30deg;
+    translate: 100px -50px;
+}
+.pauseLine1 {
+    left: calc(30% - 8px);
+    top: calc(50% - 2px);
+    rotate: 90deg;
+    translate: 0 -100px;
+}
+.pauseLine2 {
+    left: calc(30% + 8px);
+    top: calc(50% - 2px);
+    rotate: 90deg;
+    translate: 0 100px;
+}
+.playButton.isPaused .playLine1,
+.playButton.isPaused .playLine2,
+.playButton.isPaused .playLine3,
+.playButton.isPlaying .pauseLine1,
+.playButton.isPlaying .pauseLine2 {
+    translate: 0 0;
+}

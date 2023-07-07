@@ -2,12 +2,14 @@ import styleClasses from './PlayerProgressBar.module.css';
 
 const PlayerProgressBar = ( props ) => {
 
-    const progressTime = props.songDuration * props.songPageState.progressBarPercent / 100;
+    const currentSongDuration = props.songDuration ? props.songDuration : 0;
 
-    const durationMinutes = Math.floor( props.songDuration / 60 );
-    const durationSeconds = Math.floor( props.songDuration % 60 ) < 10
-        ? `0${ Math.floor( props.songDuration % 60 ) }`
-        : Math.floor( props.songDuration % 60 );
+    const progressTime = currentSongDuration * props.songPageState.progressBarPercent / 100;
+
+    const durationMinutes = Math.floor( currentSongDuration / 60 );
+    const durationSeconds = Math.floor( currentSongDuration % 60 ) < 10
+        ? `0${ Math.floor( currentSongDuration % 60 ) }`
+        : Math.floor( currentSongDuration % 60 );
     const durationParser = `${ durationMinutes }:${ durationSeconds }`;
 
 

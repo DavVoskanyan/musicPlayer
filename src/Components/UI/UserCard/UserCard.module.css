@@ -5,9 +5,7 @@
     background: #c2fc4a;
     border-radius: 30px;
     overflow: hidden;
-    position: absolute;
-    bottom: 0;
-    top: 0;
+    position: relative;
 }
 .goBackButton {
     width: 15%;
