@@ -9,42 +9,58 @@
         {
           "songId": 4,
           "songName": "тёмным по белому",
-          "songPath": "drummatix1.mp3"
+          "songPath": "drummatix1.mp3",
+          "artist": "drummatix",
+          "albumImageFileName": "albumImage5.png"
         },
         {
           "songId": 5,
           "songName": "тепло",
-          "songPath": "drummatix1.mp3"
+          "songPath": "drummatix1.mp3",
+          "artist": "drummatix",
+          "albumImageFileName": "albumImage5.png"
         },
         {
           "songId": 6,
           "songName": "успокой",
-          "songPath": "drummatix1.mp3"
+          "songPath": "drummatix1.mp3",
+          "artist": "drummatix",
+          "albumImageFileName": "albumImage5.png"
         },
         {
           "songId": 7,
           "songName": "земля",
-          "songPath": "drummatix1.mp3"
+          "songPath": "drummatix1.mp3",
+          "artist": "drummatix",
+          "albumImageFileName": "albumImage5.png"
         },
         {
           "songId": 8,
           "songName": "к пропасти",
-          "songPath": "drummatix1.mp3"
+          "songPath": "drummatix1.mp3",
+          "artist": "drummatix",
+          "albumImageFileName": "albumImage5.png"
         },
         {
           "songId": 9,
           "songName": "рубикон",
-          "songPath": "drummatix1.mp3"
+          "songPath": "drummatix1.mp3",
+          "artist": "drummatix",
+          "albumImageFileName": "albumImage5.png"
         },
         {
           "songId": 10,
           "songName": "монолит",
-          "songPath": "drummatix1.mp3"
+          "songPath": "drummatix1.mp3",
+          "artist": "drummatix",
+          "albumImageFileName": "albumImage5.png"
         },
         {
           "songId": 11,
           "songName": "афробит",
-          "songPath": "drummatix1.mp3"
+          "songPath": "drummatix1.mp3",
+          "artist": "drummatix",
+          "albumImageFileName": "albumImage5.png"
         }
       ]
     },
@@ -57,57 +73,79 @@
         {
           "songId": 1,
           "songName": "can't you hear me callin'",
-          "songPath": "Crooked1.mp3"
+          "songPath": "Crooked1.mp3",
+          "albumImageFileName": "albumImage6.png",
+          "artist": "crooked still"
         },
         {
           "songId": 2,
           "songName": "little sadie",
-          "songPath": "Crooked2.mp3"
+          "songPath": "Crooked2.mp3",
+          "albumImageFileName": "albumImage6.png",
+          "artist": "crooked still"
         },
         {
           "songId": 3,
           "songName": "new railroad",
-          "songPath": "Crooked3.mp3"
+          "songPath": "Crooked3.mp3",
+          "albumImageFileName": "albumImage6.png",
+          "artist": "crooked still"
         },
         {
           "songId": 4,
           "songName": "oxford town / cumberland gap",
-          "songPath": "Crooked4.mp3"
+          "songPath": "Crooked4.mp3",
+          "albumImageFileName": "albumImage6.png",
+          "artist": "crooked still"
         },
         {
           "songId": 5,
           "songName": "lone pilgrim",
-          "songPath": "Crooked5.mp3"
+          "songPath": "Crooked5.mp3",
+          "albumImageFileName": "albumImage6.png",
+          "artist": "crooked still"
         },
         {
           "songId": 6,
           "songName": "come on in my kitchen",
-          "songPath": "Crooked6.mp3"
+          "songPath": "Crooked6.mp3",
+          "albumImageFileName": "albumImage6.png",
+          "artist": "crooked still"
         },
         {
           "songId": 7,
           "songName": "ain't no grave",
-          "songPath": "Crooked7.mp3"
+          "songPath": "Crooked7.mp3",
+          "albumImageFileName": "albumImage6.png",
+          "artist": "crooked still"
         },
         {
           "songId": 8,
           "songName": "ecstasy",
-          "songPath": "Crooked8.mp3"
+          "songPath": "Crooked8.mp3",
+          "albumImageFileName": "albumImage6.png",
+          "artist": "crooked still"
         },
         {
           "songId": 9,
           "songName": "mountain jumper",
-          "songPath": "Crooked9.mp3"
+          "songPath": "Crooked9.mp3",
+          "albumImageFileName": "albumImage6.png",
+          "artist": "crooked still"
         },
         {
           "songId": 10,
           "songName": "railroad bill",
-          "songPath": "Crooked10.mp3"
+          "songPath": "Crooked10.mp3",
+          "albumImageFileName": "albumImage6.png",
+          "artist": "crooked still"
         },
         {
           "songId": 11,
           "songName": "wind and rain",
-          "songPath": "Crooked11.mp3"
+          "songPath": "Crooked11.mp3",
+          "albumImageFileName": "albumImage6.png",
+          "artist": "crooked still"
         }
       ]
     }
@@ -116,78 +154,78 @@
     {
       "songId": 1,
       "songName": "башня из слоновой кости",
-      "artistName": "oxxxymiron",
-      "songImage": "albumImage2.png",
+      "artist": "oxxxymiron",
+      "albumImageFileName": "albumImage2.png",
       "songPath": "Oxxxy1.mp3"
     },
     {
       "songId": 2,
       "songName": "little sadie",
-      "artistName": "crooked still",
-      "songImage": "albumImage6.png",
-      "songPath": "Crooked2.mp3"
+      "artist": "crooked still",
+      "albumImageFileName": "albumImage6.png",
+      "songPath": "Crooked1.mp3"
     },
     {
       "songId": 3,
       "songName": "new railroad",
-      "artistName": "crooked still",
-      "songImage": "albumImage6.png",
+      "artist": "crooked still",
+      "albumImageFileName": "albumImage6.png",
       "songPath": "Crooked3.mp3"
     },
     {
       "songId": 4,
       "songName": "oxford town / cumberland gap",
-      "artistName": "crooked still",
-      "songImage": "albumImage6.png",
+      "artist": "crooked still",
+      "albumImageFileName": "albumImage6.png",
       "songPath": "Crooked4.mp3"
     },
     {
       "songId": 5,
       "songName": "рубикон",
-      "artistName": "drummatix",
-      "songImage": "albumImage5.png",
+      "artist": "drummatix",
+      "albumImageFileName": "albumImage5.png",
       "songPath": "drummatix1.mp3"
     },
     {
       "songId": 6,
       "songName": "come on in my kitchen",
-      "artistName": "crooked still",
-      "songImage": "albumImage6.png",
+      "artist": "crooked still",
+      "albumImageFileName": "albumImage6.png",
       "songPath": "Crooked6.mp3"
     },
     {
       "songId": 7,
       "songName": "ain't no grave",
-      "artistName": "crooked still",
-      "songImage": "albumImage6.png",
+      "artist": "crooked still",
+      "albumImageFileName": "albumImage6.png",
       "songPath": "Crooked7.mp3"
     },
     {
       "songId": 8,
       "songName": "ecstasy",
-      "artistName": "crooked still",
-      "songImage": "albumImage6.png",
+      "artist": "crooked still",
+      "albumImageFileName": "albumImage6.png",
       "songPath": "Crooked8.mp3"
     },
     {
       "songId": 9,
       "songName": "mountain jumper",
-      "artistName": "crooked still",
-      "songImage": "albumImage6.png",
+      "artist": "crooked still",
+      "albumImageFileName": "albumImage6.png",
       "songPath": "Crooked9.mp3"
     },
     {
       "songId": 10,
       "songName": "railroad bill",
-      "artistName": "crooked still",
-      "songImage": "albumImage6.png",
+      "artist": "crooked still",
+      "albumImageFileName": "albumImage6.png",
       "songPath": "Crooked10.mp3"
     },
     {
       "songId": 11,
       "songName": "wind and rain",
-      "artistName": "crooked still",
-      "songImage": "albumImage6.png",
+      "artist": "crooked still",
+      "albumImageFileName": "albumImage6.png",
       "songPath": "Crooked11.mp3"
     }
   ]

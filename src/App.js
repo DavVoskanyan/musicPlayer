@@ -33,29 +33,34 @@ import SongListPage from "./Components/Pages/SongListPage/SongListPage";
     } );
     const [ songPageState, changeSongPageState ] = useState( {
         isOpen: false,
+        isPlaying: true,
         currentPlayingSong: null,
-        progressBarPercent: 0,
-        isPlaying: false
+        currentPlayingAlbum: [],
+        progressBarPercent: 0
     } );
 
-     useEffect( () => {
+    useEffect( () => {
+
          ( async () => {
-             const [ albums, songs ] = await Promise.all( [
+
+             [ initAlbumsInfo.current, initSongsInfo.current ] = await Promise.all( [
                  await getHomePageAlbums(),
                  await getHomePageSongs()
              ] )
 
-             initAlbumsInfo.current = albums;
-             initSongsInfo.current = songs;
-             changeHomePageState( { ...homePageState, currentAlbums: albums, currentSongs: songs } );
+             changeHomePageState( {
+                 ...homePageState,
+                 currentAlbums: initAlbumsInfo.current,
+                 currentSongs: initSongsInfo.current
+             } );
+
          } )();
 
-     }, [ ] )
+     }, [] )
 
     const isAnyPageOpen = userInfoPageState.isOpen || songPageState.isOpen || songListPageState.isOpen;
 
-
-const searchInputHandler = searchText => {
+    const searchInputHandler = searchText => {
 
     if( searchText.trim() ) {
         getBySearch()
@@ -75,8 +80,6 @@ const searchInputHandler = searchText => {
         } )
     }
 }
-
-
 
 
     return (
