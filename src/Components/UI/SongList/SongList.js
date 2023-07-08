@@ -16,11 +16,12 @@ const SongList = ( props ) => {
                     return (
                         <InListSong key={ songInfo.songId }
                                     withImage={ props.withImage }
+                                    albumSongs={ songsArray }
                                     songInfo={ {
                                         ...songInfo,
                                         artistName: artistName,
                                         songImage: songImage
-                        } }
+                                    } }
 
                                     songPageState={ props.songPageState }
                                     changeSongPageState={ props.changeSongPageState } />

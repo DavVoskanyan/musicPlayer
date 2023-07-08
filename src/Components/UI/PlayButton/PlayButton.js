@@ -10,9 +10,11 @@ const PlayButton = ( props ) => {
     return (
         <button className={
                     ` ${ styleClasses.playButton } 
-                      ${ props.isPlaying ? styleClasses.isPlaying : styleClasses.isPaused } `
+                      ${ props.songPageState['isPlaying'] ? styleClasses.isPlaying : styleClasses.isPaused } `
                 }
-                onClick={ () => onPlayButtonClickHandler( props.isPlaying, props.pauseSong, props.playSong ) } >
+                onClick={ () => {
+                    onPlayButtonClickHandler( props.songPageState['isPlaying'], props.pauseSong, props.playSong )
+                } } >
 
             <div className={styleClasses.playLine1}></div>
             <div className={styleClasses.playLine2}></div>

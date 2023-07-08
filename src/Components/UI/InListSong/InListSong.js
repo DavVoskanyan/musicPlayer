@@ -16,7 +16,9 @@ const InListSong = ( props ) => {
 
             props.changeSongPageState( {
                 isOpen: true,
+                isPlaying: true,
                 currentPlayingSong: props.songInfo,
+                currentPlayingAlbum: props.albumSongs,
                 progressBarPercent: 0
             } );
 
@@ -31,7 +33,7 @@ const InListSong = ( props ) => {
             {
                 props.withImage
                     ? <img className={ styleClasses.songImage }
-                           src={ `/AlbumImages/${ props.songInfo.songImage }` }
+                           src={ `/AlbumImages/${ props.songInfo['albumImageFileName'] }` }
                            alt='songImage' />
                     : ''
             }
@@ -43,7 +45,7 @@ const InListSong = ( props ) => {
                 </span>
 
                 <span className={ styleClasses.songAuthor } >
-                    { props.songInfo.artistName }
+                    { props.songInfo.artist }
                 </span>
 
             </div>

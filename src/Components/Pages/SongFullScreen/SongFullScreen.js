@@ -6,7 +6,7 @@ import PlayerPanel from "../../UI/PlayerPanel/PlayerPanel";
 
 const SongFullScreen = ( props ) => {
 
-    const songImageSrc = `/AlbumImages/${ props.songPageState.currentPlayingSong?.songImage }`;
+    const songImageSrc = `/AlbumImages/${ props.songPageState.currentPlayingSong?.albumImageFileName }`;
     const backgroundImageStyle = {
         backgroundImage: `url( ${ songImageSrc } )`
     }

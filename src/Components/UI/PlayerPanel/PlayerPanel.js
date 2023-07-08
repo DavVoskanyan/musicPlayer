@@ -34,7 +34,21 @@ const PlayerPanel = ( props ) => {
         audioElement.current.currentTime = audioElement.current.duration * percent / 100;
     }
 
-    const previousSong = () => console.log( 'prev' );
+    const previousSong = () => {
+        const currentSongId = props.songPageState.currentPlayingSong['songId'];
+        const songsList = props.songPageState.currentPlayingAlbum;
+
+        for(let i = 0; i < songsList.length; i++) {
+            if(songsList[i]['songId'] === currentSongId) {
+                props.changeSongPageState( {
+                    ...props.songPageState,
+                    isPlaying: true,
+                    currentPlayingSong: songsList.at(i - 1)
+                } );
+                break;
+            }
+        }
+    };
     const playSong = () => {
         audioElement.current.play();
         props.changeSongPageState( { ...props.songPageState, isPlaying: true } );
@@ -43,7 +57,21 @@ const PlayerPanel = ( props ) => {
         audioElement.current.pause();
         props.changeSongPageState( { ...props.songPageState, isPlaying: false } );
     }
-    const nextSong = () => console.log( 'next' );
+    const nextSong = () => {
+        const currentSongId = props.songPageState.currentPlayingSong['songId'];
+        const songsList = props.songPageState.currentPlayingAlbum;
+
+        for(let i = 0; i < songsList.length; i++) {
+            if(songsList[i]['songId'] === currentSongId) {
+                props.changeSongPageState( {
+                    ...props.songPageState,
+                    isPlaying: true,
+                    currentPlayingSong: songsList[ (i + 1) % songsList.length ]
+                } );
+                break;
+            }
+        }
+    };
 
     return (
         <div className={ styleClasses.playerPanel } >
@@ -51,10 +79,16 @@ const PlayerPanel = ( props ) => {
             <audio src={ `/Audio/${ props.songPageState.currentPlayingSong?.songPath }` }
                    ref={ audioElement }
                    onTimeUpdate={ timeUpdateHandler }
-                   onCanPlay={ setSongDuration } />
+                   onCanPlay={ () => {
+                       if(props.songPageState.isOpen) {
+                           setSongDuration();
+                           playSong();
+                       }
+                       setSongDuration();
+                   } } />
 
             <InPlayerSongInfo songName={ props.songPageState.currentPlayingSong?.songName }
-                              artistName={ props.songPageState.currentPlayingSong?.artistName }
+                              artistName={ props.songPageState.currentPlayingSong?.artist }
                               featsArray={ [ ] } />
 
             <div className={styleClasses.buttonsPanel} >
@@ -72,7 +106,8 @@ const PlayerPanel = ( props ) => {
                 <PlayerButton buttonType="previous"
                               buttonClickHandler={ previousSong } />
 
-                <PlayButton isPlaying={ props.songPageState.isPlaying }
+                <PlayButton songPageState={ props.songPageState }
+
                             pauseSong={ pauseSong }
                             playSong={ playSong } />
 
